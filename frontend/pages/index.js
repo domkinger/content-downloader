@@ -8,7 +8,8 @@ const HomePage = () => {
   const downloadFrame = useRef(null);
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:3030');
+    const wsBaseUrl = `ws://${process.env.NEXT_PUBLIC_BASE_URL}`;
+    const ws = new WebSocket(wsBaseUrl);
 
     ws.onopen = () => {
       console.log('WebSocket Connected');
@@ -56,7 +57,8 @@ const HomePage = () => {
     }
 
     setIsLoading(true); // Start loading
-    const endpoint = `http://localhost:3030/download/${format}/${videoId}`;
+    const httpBaseUrl = `http://${process.env.NEXT_PUBLIC_BASE_URL}`;
+    const endpoint = `${httpBaseUrl}/download/${format}/${videoId}`;
     if (downloadFrame.current) {
       downloadFrame.current.src = endpoint;
     }
