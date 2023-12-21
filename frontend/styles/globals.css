@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.retro-container {
+  font-family: 'MS Sans Serif', sans-serif;
+  background-color: #008080; /* Teal background, common in Windows 98 */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.retro-form {
+  background-color: #c0c0c0; /* Classic gray */
+  border: 3px outset #fff;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: -4px 4px 0px 0px #000;
+}
+
+.retro-title {
+  font-size: 1.5rem;
+  color: #000080; /* Dark blue */
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.retro-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+.retro-input,
+.retro-select {
+  border: 1px solid #333;
+  background-color: #fff;
+  padding: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.retro-button {
+  background-color: #000080; /* Dark blue */
+  color: #fff;
+  border: 1px solid #000;
+  padding: 6px 12px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.retro-button:hover {
+  background-color: #0000ff; /* Brighter blue */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .retro-form {
+    padding: 15px;
+  }
+  .retro-title {
+    font-size: 1.2rem;
+  }
+}
+
+.retro-loader {
+  font-family: 'MS Sans Serif', sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background: #000080;
+  color: #fff;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.retro-progress-container {
+  background-color: #000080; /* Dark blue */
+  border: 2px solid #000;
+  padding: 2px;
+  margin-top: 10px;
+}
+
+.retro-progress-bar {
+  background-color: #00ff00; /* Bright green */
+  height: 20px; /* Thickness of the progress bar */
+  width: 0%; /* Initial width */
+}

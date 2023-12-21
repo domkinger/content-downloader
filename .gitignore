@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Next.js
+.next/
+out/
+
+# Environment Variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Optional: logs
+*.log
+logs/
+
+# Optional: Dependency directories
+jspm_packages/
+bower_components/
+
+# Optional: macOS
+*.DS_Store
+
+# Optional: Yarn Integrity file
+.yarn-integrity
